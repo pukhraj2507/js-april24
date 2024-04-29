@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nam impedit harum est tenetur doloremque atque dignissimos expedita aliquid beatae, corrupti veniam molestias culpa facilis praesentium voluptates laudantium quas assumenda cupiditate, placeat consequuntur cumque labore! Architecto harum excepturi provident, doloremque quaerat dolorum, pariatur alias similique, culpa tempora iusto nesciunt tempore?
+</body>
+<script>
+    const requestUrl = "https://randomuser.me/api/"
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl )
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log(data.info.seed);
+        }
+    }
+    
+    xhr.send()
+</script>
+</html>
