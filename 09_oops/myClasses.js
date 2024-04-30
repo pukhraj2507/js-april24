@@ -23,6 +23,8 @@ console.log(lorem.encryptPassword());
 console.log(lorem.changeUsername());
 
 
+
+
 // ----------- behind the scene ---------
 
 function User(username, email, password){
